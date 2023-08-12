@@ -1,0 +1,26 @@
+<table class="table table-bordered border border-primary mt-3">
+    <caption align="top" class="bg-light p-2">DANH SÁCH DỰ ÁN
+    </caption>
+    <tr>
+        <th> id </th>
+        <th> Tên dự án</th>
+        <th> Ngày bắt đầu</th>
+        <th> Tiền</th>
+        <th> Leader</th>
+        <th> Thành viên</th>
+        <th> Hành động</th>
+    </tr>
+    <tr *ngFor="let da of listDuAn">
+        <td> {{da.id}} </td>
+        <td><a [routerLink]="['/chitietduan', da.id]" href=""
+                style="text-decoration: none;color:black">{{da.tenDuAn}}</a></td>
+        <td> {{da.ngayStart | date:'dd/MM/yyyy'}}</td>
+        <td> {{formatCurrency(da.tien)}}</td>
+        <td> {{da.leader}}</td>
+        <td> {{da.thanhvien}}</td>
+        <td>
+            <button class="btn btn-danger" (click)="xoaDuAn(da.id)">Xóa</button>
+            <button class="btn btn-warning" [routerLink]="['/leader/duan-sua', da.id]">Sửa</button>
+        </td>
+    </tr>
+</table>

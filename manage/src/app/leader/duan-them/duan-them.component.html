@@ -1,0 +1,35 @@
+<form #frm="ngForm" class="mt-3">
+    <h5 class="bg-warning p-2">THÊM DỰ ÁN</h5>
+    <p>Tên Dự Án: <input name="tenDuAn" ngModel required minlength="3" type="text" class="form-control"
+            #loiun="ngModel">
+        <span *ngIf="loiun.errors?.['required']" class="text-light">
+            Tên Dự Án dài từ 3 ký tự trở lên.
+        </span>
+        <em *ngIf="loiun.errors?.['minlength']['actualLength']<loiun.errors?.['minlength']['requiredLength']"
+            class="text-light">
+            Tên Dự Án chưa đủ dài
+        </em>
+    </p>
+
+    <p>Giá: <input name="tien" ngModel required minlength="6" type="number" class="form-control" #loitien="ngModel">
+        <span *ngIf="loitien.errors?.['required']" class="text-light">
+            Giá dự án phải lớn hơn 1 triệu.
+        </span>
+        <em *ngIf="loitien.errors?.['minlength']['actualLength']<loitien.errors?.['minlength']['requiredLength']"
+            class="text-light">
+            Giá dự án phải lớn hơn 1 triệu.
+        </em>
+    </p>
+    <p>Ngày Bắt Đầu: <input name="ngayStart" ngModel type="date" class="form-control"></p>
+    <p>Leader: <select name="leader" ngModel class="form-control" id="">
+            <option *ngFor="let nv of listNV" [value]="nv.ten">
+                {{nv.ho}} {{nv.ten}}
+            </option>
+        </select></p>
+    <p>Thành viên: <select name="thanhvien" ngModel multiple size="5" class="form-control" id="">
+            <option *ngFor="let nv of listNV" [value]="nv.ten">
+                {{nv.ho}} {{nv.ten}}
+            </option>
+        </select></p>
+    <p><button class="btn btn-primary p-2" (click)="themDuAn(frm.value)">Thêm dự án</button></p>
+</form>

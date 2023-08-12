@@ -1,0 +1,12 @@
+<form #frm="ngForm" class="mt-3">
+    <h5 class="bg-warning p-2">THÊM NHÂN VIÊN</h5>
+    <p>Họ Nhân Viên: <input name="ho" ngModel type="text" class="form-control"></p>
+    <p>Tên Nhân Viên: <input name="ten" ngModel type="text" class="form-control"></p>
+    <p>Ngày Sinh: <input name="ngaysinh" ngModel type="date" class="form-control"></p>
+    <p>Phái: <select name="phai" ngModel class="form-control" id="">
+        <option value="Nam">Nam</option>
+        <option value="Nữ">Nữ</option>
+    </select></p>
+    <p>Khu vực: <input name="khuvuc" ngModel class="form-control" type="text"></p>
+    <p><button class="btn btn-primary p-2" (click)="themNhanVien(frm.value)">Thêm Nhân Viên</button></p>
+</form>

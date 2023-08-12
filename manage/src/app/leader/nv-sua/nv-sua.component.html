@@ -1,0 +1,16 @@
+<form #frm="ngForm" class="mt-3">
+    <h5 class="bg-warning p-2">SỬA NHÂN VIÊN</h5>
+    <p>Họ Nhân Viên: <input name="ho" [(ngModel)]="nhanvien.ho" type="text" class="form-control"></p>
+    <p>Tên Nhân Viên: <input name="ten" [(ngModel)]="nhanvien.ten" type="text" class="form-control"></p>
+    <p>Ngày Sinh: <input name="ngaysinh" [(ngModel)]="nhanvien.ngaysinh" type="date" class="form-control"></p>
+    <p>Phái: <select name="phai" [(ngModel)]="nhanvien.phai" class="form-control" id="">
+        <option value="Nam">Nam</option>
+        <option value="Nữ">Nữ</option>
+    </select></p>
+    <p>Khu vực: <select name="khuvuc" [(ngModel)]="nhanvien.khuvuc" multiple size="3" class="form-control" id="">
+        <option *ngFor="let kv of khuvuc" [value]="kv.khuvuc">
+            {{kv.khuvuc}}
+        </option>
+    </select></p>
+    <p><button class="btn btn-primary p-2" (click)="suaNhanVien()">Sửa Nhân Viên</button></p>
+</form>

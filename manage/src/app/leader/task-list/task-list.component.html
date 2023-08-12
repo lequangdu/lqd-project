@@ -1,0 +1,24 @@
+<table class="table table-bordered border border-primary mt-3">
+    <caption align="top" class="bg-light p-2">DANH SÁCH TASK</caption>
+    <tr>
+        <th> ID</th>
+        <th> Nhân viên</th>
+        <th> Tên Task </th>
+        <th> Mô tả</th>
+        <th> Độ ưu tiên</th>
+        <th> Trạng thái</th>
+        <th> Hành động</th>
+    </tr>
+    <tr *ngFor="let task of listTask">
+        <td> {{task.id}} </td>
+        <td> {{task.nhanvien}}</td>
+        <td> {{task.tenTask}}</td>
+        <td> {{task.moTa}}</td>
+        <td> {{task.priority}}</td>
+        <td> {{task.status}}</td>
+        <td>
+            <button class="btn btn-warning" (click)="xoaTask(task.id)">Xóa</button>
+            <button class="btn btn-warning" [routerLink]="['/leader/task-sua', task.id]">Sửa</button>
+        </td>
+    </tr>
+</table>

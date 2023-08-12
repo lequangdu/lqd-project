@@ -1,0 +1,21 @@
+<form #frm="ngForm" class="mt-3">
+    <h5 class="bg-warning p-2">SỬA TASK</h5>
+    <p>Tên Task: <input name="tenTask" [(ngModel)]="task.tenTask" type="text" class="form-control"></p>
+    <p>Mô tả: <input name="moTa" [(ngModel)]="task.moTa" type="text" class="form-control"></p>
+    <p>Tên nhân viên: <select name="nhanvien" [(ngModel)]="task.nhanvien" multiple size="5" class="form-control" id="">
+        <option *ngFor="let nv of nhanvien" [value]="nv.ten">
+            {{nv.ho}} {{nv.ten}}
+        </option>
+    </select></p>
+    <p>Độ ưu tiên: <select name="priority" [(ngModel)]="task.priority" multiple size="3" class="form-control" id="">
+            <option value="Cao">Cao</option>
+            <option value="Trung bình">Trung bình</option>
+            <option value="Thấp">Thấp</option>
+    </select></p>
+    <p>Trạng thái: <select name="status" [(ngModel)]="task.status" multiple size="3" class="form-control" id="">
+            <option value="Đang thực hiện">Đang thực hiện</option>
+            <option value="Đã hoàn thành">Đã hoàn thành</option>
+            <option value="Chưa thực hiện">Chưa thực hiện</option>
+    </select></p>
+    <p><button class="btn btn-primary p-2" (click)="suaTask()">Sửa Task</button></p>
+</form>

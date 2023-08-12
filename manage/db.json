@@ -1,0 +1,185 @@
+{
+  "duan": [
+    {
+      "id": 3,
+      "tenDuAn": "Quản lý xe máy",
+      "ngayStart": "2015-04-02",
+      "tien": 3000000,
+      "leader": "Nguyễn Văn C",
+      "thanhvien": [
+        "Quang Dự"
+      ]
+    },
+    {
+      "id": 4,
+      "tenDuAn": "Quản lý nhiên liệu",
+      "ngayStart": "2017-04-02",
+      "tien": 4000000,
+      "leader": "Nguyễn Văn D",
+      "thanhvien": [
+        "Quang Dự"
+      ]
+    },
+    {
+      "tenDuAn": "Dự án 2",
+      "tien": 2000000,
+      "ngayStart": "2003-01-12",
+      "leader": "Thị Duyên",
+      "thanhvien": [
+        "Văn Bình",
+        "Thị Cường",
+        "Văn Em"
+      ],
+      "id": 5
+    },
+    {
+      "tenDuAn": "Dự án 12",
+      "tien": 12010212,
+      "ngayStart": "2011-11-11",
+      "leader": "Văn Anh",
+      "thanhvien": [
+        "Văn Bình",
+        "Thị Cường",
+        "Văn Em"
+      ],
+      "id": 6
+    },
+    {
+      "tenDuAn": "Dự án bất kì",
+      "tien": 12000000,
+      "ngayStart": "2022-08-12",
+      "leader": "Quang Dự",
+      "thanhvien": [
+        "Quang Dự"
+      ],
+      "id": 7
+    },
+    {
+      "tenDuAn": "aaa",
+      "tien": 1,
+      "ngayStart": "1111-01-11",
+      "leader": "Quang Dự",
+      "thanhvien": [
+        "Quang Dự"
+      ],
+      "id": 8
+    }
+  ],
+  "nhanvien": [
+    {
+      "ho": "Lê",
+      "ten": "Quang Dự",
+      "ngaySinh": "",
+      "phai": "Nam",
+      "khuvuc": "Hà Nội",
+      "id": 1,
+      "ngaysinh": "2001-07-22"
+    },
+    {
+      "ho": "Lê",
+      "ten": "Quang Dự",
+      "ngaySinh": "2003-12-01",
+      "phai": "Nam",
+      "khuvuc": [
+        "Hồ Chí Minh"
+      ],
+      "id": 2,
+      "ngaysinh": "1111-01-11"
+    },
+    {
+      "ho": "",
+      "ten": "Quang Dự",
+      "ngaysinh": "2222-02-22",
+      "phai": "Nữ",
+      "khuvuc": [
+        "Hà Nội"
+      ],
+      "id": 3
+    },
+    {
+      "ho": "q",
+      "ten": "sd",
+      "ngaysinh": "2003-12-01",
+      "phai": "Nam",
+      "khuvuc": "Kiên Giang",
+      "id": 4
+    }
+  ],
+  "task": [
+    {
+      "id": 2,
+      "tenTask": "Thực hiện layout cho ứng dụng",
+      "duAnID": 1,
+      "nhanvienID": 2,
+      "moTa": "Thực hiện layout website, chú ý kỹ responsive",
+      "status": "Chưa thực hiện",
+      "priority": "Thấp"
+    },
+    {
+      "id": 3,
+      "tenTask": "Tìm hiểu yêu cầu của khách hàng",
+      "duAnID": 2,
+      "nhanvienID": 3,
+      "moTa": "Đến công ty và ghi nhận các yêu cầu của khách hàng",
+      "status": "Đang thực hiện",
+      "priority": "Trung bình"
+    },
+    {
+      "id": 4,
+      "tenTask": "Đăng ký thành viên",
+      "duAnID": 3,
+      "nhanvienID": 4,
+      "moTa": "Thực hiện chức năng đăng ký, có capcha, mail kích hoạt",
+      "status": "Đang thực hiện",
+      "priority": "Thấp",
+      "nhanvien": [
+        "Văn Bình"
+      ]
+    },
+    {
+      "id": 5,
+      "tenTask": "Đổi pass, quên pass",
+      "duAnID": 1,
+      "nhanvienID": 5,
+      "moTa": "Thực hiện chức năng đỗi pass, quên pass. Nhớ kiểm tra user login, email tồn tại, pass cũ hợp lệ ",
+      "status": "Chưa thực hiện",
+      "priority": "Cao",
+      "nhanvien": [
+        "Thị Duyên"
+      ]
+    },
+    {
+      "id": 6,
+      "tenTask": "Testing 1",
+      "duAnID": 4,
+      "nhanvienID": 1,
+      "moTa": "Kiểm tra mọi form chức năng theo các case đã liệt kê",
+      "status": "Đang thực hiện",
+      "priority": "Trung bình",
+      "nhanvien": [
+        "Văn Anh"
+      ]
+    },
+    {
+      "id": 8,
+      "tenTask": "Hướng dẫn sử dụng và bàn giao",
+      "duAnID": 5,
+      "nhanvienID": 3,
+      "moTa": "Hướng dẫn sử dụng cho khách hàng",
+      "status": "Đang thực hiện",
+      "priority": "Cao"
+    },
+    {
+      "id": 9,
+      "tenTask": "Testing 2",
+      "duAnID": 4,
+      "nhanvienID": 4,
+      "moTa": "Kiểm tra các tính năng bảo mật theo các yêu cầu đã nêu trong tài liệu dự án",
+      "status": "Đã hoàn thành",
+      "priority": "Trung bình",
+      "nhanvien": [
+        "Văn Em"
+      ]
+    }
+  ]
+}

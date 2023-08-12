@@ -1,0 +1,37 @@
+<form #frm="ngForm" class="mt-3">
+    <h5 class="bg-warning p-2">THÊM TASK</h5>
+    <p>Tên Task: <input name="tenTask" ngModel required minlength="10" type="text" class="form-control" #loiun="ngModel">
+        <span *ngIf="loiun.errors?.['required']" class="text-light">
+            Tên Task dài từ 10 ký tự trở lên.
+        </span>
+        <em *ngIf="loiun.errors?.['minlength']['actualLength']<loiun.errors?.['minlength']['requiredLength']"
+            class="text-light">
+            Tên Task chưa đủ dài
+        </em>
+    </p>
+    <p>Mô tả: <input name="moTa" ngModel required minlength="20" type="text" class="form-control" #loimota="ngModel">
+        <span *ngIf="loimota.errors?.['required']" class="text-light">
+            Mô tả dài từ 20 ký tự trở lên.
+        </span>
+        <em *ngIf="loimota.errors?.['minlength']['actualLength']<loimota.errors?.['minlength']['requiredLength']"
+            class="text-light">
+            Mô tả chưa đủ dài
+        </em>
+    </p>
+    <p>Tên nhân viên: <select name="nhanvien" ngModel multiple size="5" class="form-control" id="">
+        <option *ngFor="let nv of nhanvien" [value]="nv.ten">
+            {{nv.ho}} {{nv.ten}}
+        </option>
+    </select></p>
+    <p>Độ ưu tiên: <select name="priority" ngModel multiple size="3" class="form-control" id="">
+            <option value="Cao">Cao</option>
+            <option value="Trung bình">Trung bình</option>
+            <option value="Thấp">Thấp</option>
+    </select></p>
+    <p>Trạng thái: <select name="status" ngModel multiple size="3" class="form-control" id="">
+            <option value="Đang thực hiện">Đang thực hiện</option>
+            <option value="Đã hoàn thành">Đã hoàn thành</option>
+            <option value="Chưa thực hiện">Chưa thực hiện</option>
+    </select></p>
+    <p><button class="btn btn-primary p-2" (click)="themTask(frm.value)">Thêm Task</button></p>
+</form>
